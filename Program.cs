@@ -130,7 +130,6 @@ namespace MJU23v_DTP_T2
                 string line = sr.ReadLine();
                 while (line != null)
                 {
-                    Console.WriteLine(line);
                     Link link = new Link(line);
                     link.DisplayDetails(index++);
                     links.Add(link);
