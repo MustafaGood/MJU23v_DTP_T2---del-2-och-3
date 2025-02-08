@@ -162,6 +162,8 @@ namespace MJU23v_DTP_T2
             string link = Console.ReadLine();
             Link newLink = new Link(category, group, name, descr, link);
             links.Add(newLink);
+            Console.WriteLine($"Länken '{name}' har skapats.");
+
         }
 
         static void SaveLinks(string filename, List<Link> links)
@@ -173,11 +175,17 @@ namespace MJU23v_DTP_T2
                     sw.WriteLine(link.ToString());
                 }
             }
+            Console.WriteLine($"Länkar har sparats till '{filename}'.");
+
         }
 
         static void RemoveLink(int index)
         {
+            Link removedLink = links[index];
+
             links.RemoveAt(index);
+            Console.WriteLine($"Länken '{removedLink.name}' har tagits bort.");
+
         }
 
         static void OpenGroup(string group)
