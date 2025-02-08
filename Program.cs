@@ -48,7 +48,7 @@ namespace MJU23v_DTP_T2
         }
         static void Main(string[] args)
         {
-            string filename = @"..\..\..\links\links.lis";
+            string filename = Path.Combine("..", "..", "..", "links", "links.lis");
             LoadLinks(filename, links);
 
             Console.WriteLine("Välkommen till länklistan! Skriv 'hjälp' för hjälp!");
@@ -71,7 +71,7 @@ namespace MJU23v_DTP_T2
                     case "ladda":
                         if (arg.Length == 2)
                         {
-                            filename = $@"..\..\..\links\{arg[1]}";
+                            filename = Path.Combine("..", "..", "..", "links", arg[1]);
                         }
                         LoadLinks(filename, links);
 
@@ -87,7 +87,7 @@ namespace MJU23v_DTP_T2
                     case "spara":
                         if (arg.Length == 2)
                         {
-                            filename = $@"..\..\..\links\{arg[1]}";
+                            filename = Path.Combine("..", "..", "..", "links", arg[1]);
                         }
                         SaveLinks(filename, links);
 
