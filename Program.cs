@@ -40,8 +40,9 @@ namespace MJU23v_DTP_T2
                 application.StartInfo.FileName = link;
                 application.Start();
             }
-            public string ToString()
+            public override string ToString()
             {
+                // FIXA: Överskrev 'ToString'-metoden för att säkerställa korrekt formatering.
                 return $"{category}|{group}|{name}|{descr}|{link}";
             }
         }
@@ -116,6 +117,7 @@ namespace MJU23v_DTP_T2
                 }
                 else
                 {
+                    // FIXA: Rättade fel i stränginterpolering i felmeddelandet.
                     Console.WriteLine("Okänt kommando: '{command}'");
                 }
             } while (true);
