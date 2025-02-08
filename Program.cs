@@ -29,7 +29,7 @@ namespace MJU23v_DTP_T2
                 descr = part[3];
                 link = part[4];
             }
-            public void DisplayDetails(int i)
+            public void DisplayDetails(int index)
             {
                 Console.WriteLine($"|{index,-2}|{category,-10}|{group,-10}|{name,-20}|{descr,-40}|");
             }
