@@ -42,7 +42,7 @@ namespace MJU23v_DTP_T2
             }
             public override string ToString()
             {
-                // FIXA: Överskrev 'ToString'-metoden för att säkerställa korrekt formatering.
+                // FIXME: Åsidosatt 'ToString'-metod för att säkerställa korrekt formatering.
                 return $"{category}|{group}|{name}|{descr}|{link}";
             }
         }
@@ -95,6 +95,7 @@ namespace MJU23v_DTP_T2
                     case "ta":
                         if (arg[1] == "bort")
                         {
+                            // FIXME: Lägg till felhantering för att analysera index.
                             RemoveLink(Int32.Parse(arg[2]));
                         }
                         break;
@@ -106,6 +107,7 @@ namespace MJU23v_DTP_T2
                         }
                         else if (arg[1] == "länk")
                         {
+                            // FIXME: Lägg till felhantering för att analysera index.
                             OpenLink(Int32.Parse(arg[2]));
 
                         }
@@ -120,17 +122,25 @@ namespace MJU23v_DTP_T2
         static void LoadLinks(string filename, List<Link> links)
         {
             links.Clear();
-            using (StreamReader sr = new StreamReader(filename))
+            try
             {
-                int index = 0;
-                string line = sr.ReadLine();
-                while (line != null)
+                using (StreamReader sr = new StreamReader(filename))
                 {
-                    Link link = new Link(line);
-                    link.DisplayDetails(index++);
-                    links.Add(link);
-                    line = sr.ReadLine();
+                    int index = 0;
+                    string line = sr.ReadLine();
+                    while (line != null)
+                    {
+                        Link link = new Link(line);
+                        link.DisplayDetails(index++);
+                        links.Add(link);
+                        line = sr.ReadLine();
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                // FIXME: Lägg till korrekt felhantering för filläsning.
+                Console.WriteLine($"Fel vid läsning av fil: {ex.Message}");
             }
         }
 

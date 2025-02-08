@@ -1,0 +1,73 @@
+[33mcommit f97fa8454d4f8a9bc7166fadb1730b1ae919879c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: Mustafa Salahuddin <Mustafa.swedish@gmail.com>
+Date:   Sat Feb 8 14:37:11 2025 +0100
+
+    Lägg till //FIXME-kommentarer för att markera potentiella problem
+
+[33mcommit 7ead54492dd899508520c1843e24bbecc6b07a5b[m
+Author: Mustafa Salahuddin <Mustafa.swedish@gmail.com>
+Date:   Sat Feb 8 14:29:52 2025 +0100
+
+    Använd Path.Combine för filsökvägar
+
+[33mcommit 0350be789dfa0c52e7f9d6914acbdfdf0c25c076[m
+Author: Mustafa Salahuddin <Mustafa.swedish@gmail.com>
+Date:   Sat Feb 8 14:25:44 2025 +0100
+
+    Ge feedback när användaren genomför olika handlingar.
+
+[33mcommit b44f4c17fcb1764c0b46588d04a77bb397e60b45[m
+Author: Mustafa Salahuddin <Mustafa.swedish@gmail.com>
+Date:   Sat Feb 8 14:22:32 2025 +0100
+
+    Dubbel return i "sluta"-kommandot
+
+[33mcommit 017b742a5b1c14d48e964b3d979555ac999771bc[m
+Author: Mustafa Salahuddin <Mustafa.swedish@gmail.com>
+Date:   Sat Feb 8 14:17:50 2025 +0100
+
+    Slutgiltig version av Main
+
+[33mcommit b3367a8811388164b7a1ae52df57e27927d65349[m
+Author: Mustafa Salahuddin <Mustafa.swedish@gmail.com>
+Date:   Sat Feb 8 13:57:48 2025 +0100
+
+    har lagt till FIXA-kommentarer och rättat identifierade fel.
+
+[33mcommit a2ba11bad00e36ae95ceea47f4f5ae1d6afa2ae7[m
+Author: Mustafa Salahuddin <Mustafa.swedish@gmail.com>
+Date:   Sat Feb 8 13:51:47 2025 +0100
+
+     Ta bort koddubblett(er)
+
+[33mcommit 2d27c9c8aba7ee0dd114a5351044e36072683622[m
+Author: Mustafa Salahuddin <Mustafa.swedish@gmail.com>
+Date:   Sat Feb 8 13:44:17 2025 +0100
+
+    har ändrat L till index
+
+[33mcommit f020faf80e924933b38d5e1c8acc4bf74470e1a7[m
+Author: Mustafa Salahuddin <Mustafa.swedish@gmail.com>
+Date:   Sat Feb 8 13:40:05 2025 +0100
+
+    Bryt ut static-metoder till en separat klass för bättre struktur och läsbarhet.
+
+[33mcommit c5fd3837299f08eb65175f3e259068c1f8f3cdf3[m
+Author: Mustafa Salahuddin <Mustafa.swedish@gmail.com>
+Date:   Sat Feb 8 13:22:39 2025 +0100
+
+    Byt ut otydliga variabelnamn som L till mer beskrivande namn som link.
+    
+    Byt ut metoder som Print och OpenLink till mer beskrivande namn som VisaDetaljer och ÖppnaLänk.
+
+[33mcommit 00f723b6cc6cebbdf4e319c61f1af1b064799a72[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Tomas Kindahl <tomas.kindahl@bahnhof.se>
+Date:   Mon Apr 3 04:37:55 2023 +0200
+
+    Add project files.
+
+[33mcommit dbb3450faf06bea2ecf53728ced5710010ed5d5f[m
+Author: Tomas Kindahl <tomas.kindahl@bahnhof.se>
+Date:   Mon Apr 3 04:37:52 2023 +0200
+
+    Add .gitattributes, .gitignore, README.md, and LICENSE.txt.
