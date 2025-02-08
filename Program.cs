@@ -168,6 +168,13 @@ namespace MJU23v_DTP_T2
         {
             Console.WriteLine("hjälp           - skriv ut den här hjälpen");
             Console.WriteLine("sluta           - avsluta programmet");
+            Console.WriteLine("ladda <fil>     - ladda länkar från en fil");
+            Console.WriteLine("lista           - lista alla länkar");
+            Console.WriteLine("ny              - skapa en ny länk");
+            Console.WriteLine("spara <fil>     - spara länkar till en fil");
+            Console.WriteLine("ta bort <index> - ta bort en länk med angivet index");
+            Console.WriteLine("öppna länk <index> - öppna en länk med angivet index");
+            Console.WriteLine("öppna grupp <index> - öppna alla länkar i en grupp med angivet index");
         }
 
         static void ListLinks()
