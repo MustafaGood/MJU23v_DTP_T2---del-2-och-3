@@ -166,15 +166,23 @@ namespace MJU23v_DTP_T2
 
         static void PrintHelp()
         {
-            Console.WriteLine("hjälp           - skriv ut den här hjälpen");
-            Console.WriteLine("sluta           - avsluta programmet");
-            Console.WriteLine("ladda <fil>     - ladda länkar från en fil");
-            Console.WriteLine("lista           - lista alla länkar");
-            Console.WriteLine("ny              - skapa en ny länk");
-            Console.WriteLine("spara <fil>     - spara länkar till en fil");
-            Console.WriteLine("ta bort <index> - ta bort en länk med angivet index");
-            Console.WriteLine("öppna länk <index> - öppna en länk med angivet index");
-            Console.WriteLine("öppna grupp <index> - öppna alla länkar i en grupp med angivet index");
+            Console.WriteLine("Välkommen till länkhanteraren!");
+            Console.WriteLine("Använd något av följande kommandon för att hantera dina länkar:");
+            Console.WriteLine("  lista                   - Lista alla länkar.");
+            Console.WriteLine("  ny                      - Skapa en ny länk.");
+            Console.WriteLine("  öppna grupp <gruppnamn> - Öppna alla länkar i en specifik grupp.");
+            Console.WriteLine("                           Exempel: 'öppna grupp NyaLänkar'");
+            Console.WriteLine("  öppna länk <index>      - Öppna en specifik länk med angivet index.");
+            Console.WriteLine("                           Exempel: 'öppna länk 5'");
+            Console.WriteLine("  ta bort <index>         - Ta bort en länk med angivet index.");
+            Console.WriteLine("                           Exempel: 'ta bort 3'");
+            Console.WriteLine("  ladda <fil>             - Ladda länkar från en fil.");
+            Console.WriteLine("                           Exempel: 'ladda links.lis' eller 'ladda links.save.lis'");
+            Console.WriteLine("  spara <fil>             - Spara länkar till en fil.");
+            Console.WriteLine("                           Exempel: 'spara links.lis' eller 'spara links.save.lis'");
+            Console.WriteLine("  hjälp                   - Skriv ut den här hjälpen.");
+            Console.WriteLine("  sluta                   - Avsluta programmet.");
+            Console.WriteLine("Vänligen välj ett kommando för att fortsätta.");
         }
 
         static void ListLinks()
