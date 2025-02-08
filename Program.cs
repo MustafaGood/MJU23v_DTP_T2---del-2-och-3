@@ -29,17 +29,16 @@ namespace MJU23v_DTP_T2
                 descr = part[3];
                 link = part[4];
             }
-            public void Print(int i)
+            public void DisplayDetails(int i)
             {
-                Console.WriteLine($"|{i,-2}|{category,-10}|{group,-10}|{name,-20}|{descr,-40}|");
+                Console.WriteLine($"|{index,-2}|{category,-10}|{group,-10}|{name,-20}|{descr,-40}|");
             }
-            public void OpenLink()
+            public void LaunchLink()
             {
                 Process application = new Process();
                 application.StartInfo.UseShellExecute = true;
                 application.StartInfo.FileName = link;
                 application.Start();
-                // application.WaitForExit();
             }
             public string ToString()
             {
@@ -51,14 +50,14 @@ namespace MJU23v_DTP_T2
             string filename = @"..\..\..\links\links.lis";
             using (StreamReader sr = new StreamReader(filename))
             {
-                int i = 0;
+                int Index = 0;
                 string line = sr.ReadLine();
                 while (line != null)
                 {
                     Console.WriteLine(line);
-                    Link L = new Link(line);
-                    L.Print(i++);
-                    links.Add(L);
+                    Link link = new Link(line);
+                    link.DisplayDetails(index++);
+                    links.Add(link);
                     line = sr.ReadLine();
                 }
             }
@@ -87,7 +86,7 @@ namespace MJU23v_DTP_T2
                     links = new List<Link>();
                     using (StreamReader sr = new StreamReader(filename))
                     {
-                        int i = 0;
+                        int index = 0;
                         string line = sr.ReadLine();
                         while (line != null)
                         {
@@ -100,9 +99,9 @@ namespace MJU23v_DTP_T2
                 }
                 else if (command == "lista")
                 {
-                    int i = 0;
-                    foreach (Link L in links)
-                        L.Print(i++);
+                    int index = 0;
+                    foreach (Link link in links)
+                        link.DisplayDetails(index++);
                 }
                 else if (command == "ny")
                 {
@@ -128,9 +127,9 @@ namespace MJU23v_DTP_T2
                     }
                     using (StreamWriter sr = new StreamWriter(filename))
                     {
-                        foreach(Link L in links)
+                        foreach(Link link in links)
                         {
-                            sr.WriteLine(L.ToString());
+                            sr.WriteLine(link.ToString());
                         }
                     }
                 }
@@ -145,18 +144,18 @@ namespace MJU23v_DTP_T2
                 {
                     if (arg[1] == "grupp")
                     {
-                        foreach (Link L in links)
+                        foreach (Link link in links)
                         {
-                            if (L.group == arg[2])
+                            if (link.group == arg[2])
                             {
-                                L.OpenLink();
+                                link.LaunchLink();
                             }
                         }
                     }
                     else if (arg[1] == "länk")
                     {
                         int ix = Int32.Parse(arg[2]);
-                        links[ix].OpenLink();
+                        links[ix].LaunchLink();
                     }
                 }
                 else
