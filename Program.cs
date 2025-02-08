@@ -133,7 +133,7 @@ namespace MJU23v_DTP_T2
                         }
                         break;
                     default:    // Okänd kommando
-                        Console.WriteLine($"Okänt kommando: '{command}'");
+                        Console.WriteLine($"Kommandot '{command}' Felaktigt kommando. Skriv 'hjälp' för en översikt av tillgängliga alternativ..");
                         break;
                 }
             } while (true);
