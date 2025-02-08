@@ -96,20 +96,40 @@ namespace MJU23v_DTP_T2
                         if (arg[1] == "bort")
                         {
                             // FIXME: Lägg till felhantering för att analysera index.
-                            RemoveLink(Int32.Parse(arg[2]));
+                            if (int.TryParse(arg[2], out int index))
+                            {
+                                RemoveLink(index);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Ogiltigt index för borttagning.");
+                            }
                         }
                         break;
                     case "öppna":
                         if (arg[1] == "grupp")
                         {
-                            OpenGroup(arg[2]);
 
+                            if (int.TryParse(arg[2], out int index))
+                            {
+                                OpenLink(index);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Ogiltigt index för öppning av länk.");
+                            }
                         }
                         else if (arg[1] == "länk")
                         {
                             // FIXME: Lägg till felhantering för att analysera index.
-                            OpenLink(Int32.Parse(arg[2]));
-
+                            if (int.TryParse(arg[2], out int index))
+                            {
+                                OpenLink(index);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Ogiltigt index för öppning av länk.");
+                            }
                         }
                         break;
                     default:    // Okänd kommando
