@@ -58,67 +58,63 @@ namespace MJU23v_DTP_T2
                 string cmd = Console.ReadLine().Trim();
                 string[] arg = cmd.Split();
                 string command = arg[0];
-                if (command == "sluta")
-                {
-                    Console.WriteLine("Hej då! Välkommen åter!");
-                }
-                else if (command == "hjälp")
-                {
-                    PrintHelp();
 
-                }
-                else if (command == "ladda")
+                switch (command)
                 {
-                    if (arg.Length == 2)
-                    {
-                        filename = $@"..\..\..\links\{arg[1]}";
-                    }
-                    LoadLinks(filename, links);
+                    case "sluta":
+                        Console.WriteLine("Hej då! Välkommen åter!");
+                        return;
+                        Console.WriteLine("Hej då! Välkommen åter!");
+                        return;
+                    case "hjälp":
+                        PrintHelp();
 
-                }
-                else if (command == "lista")
-                {
-                    ListLinks();
+                        break;
+                    case "ladda":
+                        if (arg.Length == 2)
+                        {
+                            filename = $@"..\..\..\links\{arg[1]}";
+                        }
+                        LoadLinks(filename, links);
 
-                }
-                else if (command == "ny")
-                {
-                    CreateNewLink();
+                        break;
+                    case "lista":
+                        ListLinks();
 
-                }
-                else if (command == "spara")
-                {
-                    if (arg.Length == 2)
-                    {
-                        filename = $@"..\..\..\links\{arg[1]}";
-                    }
-                    SaveLinks(filename, links);
+                        break;
+                    case "ny":
+                        CreateNewLink();
 
-                }
-                else if (command == "ta")
-                {
-                    if (arg[1] == "bort")
-                    {
-                        RemoveLink(Int32.Parse(arg[2]));
-                    }
-                }
-                else if (command == "öppna")
-                {
-                    if (arg[1] == "grupp")
-                    {
-                        OpenGroup(arg[2]);
+                        break;
+                    case "spara":
+                        if (arg.Length == 2)
+                        {
+                            filename = $@"..\..\..\links\{arg[1]}";
+                        }
+                        SaveLinks(filename, links);
 
-                    }
-                    else if (arg[1] == "länk")
-                    {
-                        OpenLink(Int32.Parse(arg[2]));
+                        break;
+                    case "ta":
+                        if (arg[1] == "bort")
+                        {
+                            RemoveLink(Int32.Parse(arg[2]));
+                        }
+                        break;
+                    case "öppna":
+                        if (arg[1] == "grupp")
+                        {
+                            OpenGroup(arg[2]);
 
-                    }
-                }
-                else
-                {
-                    // FIXA: Rättade fel i stränginterpolering i felmeddelandet.
-                    Console.WriteLine("Okänt kommando: '{command}'");
+                        }
+                        else if (arg[1] == "länk")
+                        {
+                            OpenLink(Int32.Parse(arg[2]));
+
+                        }
+                        break;
+                    default:    // Okänd kommando
+                        Console.WriteLine($"Okänt kommando: '{command}'");
+                        break;
                 }
             } while (true);
         }
